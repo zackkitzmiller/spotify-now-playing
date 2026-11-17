@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Spotify Now Playing for Stream Deck +</title>
+    <meta
+      name="description"
+      content="Show the current Spotify track across the whole Stream Deck + touch strip and control playback from the dials."
+    />
+    <link rel="icon" href="app-icon.png" />
+    <style>
+      body {
+        margin: 0;
+        background: #0b0d0c;
+        color: #e6ece8;
+        font: 17px/1.6 system-ui, sans-serif;
+      }
+      main {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 32px 20px 64px;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      header img {
+        width: 72px;
+        border-radius: 16px;
+      }
+      h1 {
+        margin: 0;
+        font-size: 36px;
+      }
+      h2 {
+        margin-top: 40px;
+        color: #1ed760;
+      }
+      img.shot {
+        width: 100%;
+        border-radius: 12px;
+        margin: 16px 0;
+      }
+      td {
+        padding: 6px 16px 6px 0;
+        vertical-align: top;
+      }
+      td:first-child {
+        font-weight: 700;
+        white-space: nowrap;
+      }
+      a {
+        color: #1ed760;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <img src="app-icon.png" alt="" />
+        <h1>Spotify Now Playing</h1>
+      </header>
+      <p>
+        Turns the whole Stream Deck + touch strip into one display: album
+        art, track, artist and elapsed time, with a progress bar across all
+        four dials. Turn, push or tap to control playback.
+      </p>
+      <img class="shot" src="thumbnail.png" alt="Stream Deck + showing the current track across the touch strip" />
+
+      <h2>Setup</h2>
+      <ol>
+        <li>Install Spotify Now Playing from the Elgato Marketplace.</li>
+        <li>
+          Drag the <b>Now Playing</b> action onto all four Stream Deck + dials.
+          Each dial shows its own column; fewer dials also work.
+        </li>
+        <li>Open the action's settings and click <b>Connect Spotify</b>.</li>
+        <li>
+          Approve access in the browser window that opens. One sign-in covers
+          all four dials.
+        </li>
+      </ol>
+      <img class="shot" src="gallery-3.png" alt="Connect Spotify in the action settings" />
+
+      <h2>What it shows</h2>
+      <img class="shot" src="gallery-1.png" alt="Album art, track, artist and time columns" />
+
+      <h2>Controls</h2>
+      <table>
+        <tr><td>Turn any dial</td><td>Spotify volume up or down</td></tr>
+        <tr><td>Push any dial</td><td>Play / pause</td></tr>
+        <tr><td>Tap the album art</td><td>Previous track</td></tr>
+        <tr><td>Tap the track or artist</td><td>Play / pause</td></tr>
+        <tr><td>Tap the time</td><td>Next track</td></tr>
+      </table>
+      <img class="shot" src="gallery-2.png" alt="Dial and touch controls" />
+
+      <h2>Requirements</h2>
+      <ul>
+        <li>Stream Deck + (needs the touch strip and dials)</li>
+        <li>Stream Deck 6.9 or later on Windows 10+ or macOS 12+</li>
+        <li>
+          Spotify Premium: Spotify only allows playback control for Premium
+          accounts.
+        </li>
+      </ul>
+
+      <h2>Troubleshooting</h2>
+      <ul>
+        <li>
+          <b>Strip says "Nothing playing":</b> start playback in any Spotify
+          app once; the plugin controls the active device.
+        </li>
+        <li>
+          <b>Sign-in fails:</b> the plugin listens on 127.0.0.1 ports 8888 to
+          8890 for Spotify's reply. Close anything using all three ports and
+          click Connect Spotify again.
+        </li>
+        <li>
+          <b>Disconnect:</b> open the action's settings and click Disconnect.
+        </li>
+      </ul>
+
+      <h2>Privacy</h2>
+      <p>
+        The plugin only reads what you are playing and sends the playback
+        commands you trigger. Your Spotify sign-in tokens stay in Stream Deck
+        on your computer; nothing is sent anywhere except Spotify.
+      </p>
+    </main>
+  </body>
+</html>
